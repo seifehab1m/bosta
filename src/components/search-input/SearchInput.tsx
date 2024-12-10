@@ -22,7 +22,7 @@ export default function SearchInput() {
   return (
     <section className="bg-primary-bg py-2 relative">
       <div className="container flex flex-col items-center justify-center">
-        <img src={tracker} alt="tracker" />
+        <img src={tracker} alt="tracker" className="animate-slideDown tran" />
         <h1 className="text-5xl text-gray-dark font-semibold pb-16">
           {t("trackYourOrder")}
         </h1>

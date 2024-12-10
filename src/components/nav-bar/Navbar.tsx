@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
         <img
           src={lang === "ar" ? logo : logoEn}
           alt="Bosta logo"
-          className="h-8"
+          className="h-8 animate-slideLeft"
         />
 
         <div className="flex items-center gap-4">
