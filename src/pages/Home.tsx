@@ -19,9 +19,9 @@ export default function Home() {
   }, [paramValue, dispatch, lang]);
 
   return (
-    <>
+    <div className="bg-white min-h-screen h-full">
       <SearchInput />
       <TrackingWrapper />
-    </>
+    </div>
   );
 }
