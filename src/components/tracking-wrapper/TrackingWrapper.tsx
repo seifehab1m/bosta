@@ -1,11 +1,14 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import TrackingSteps from "../tracking-steps/TrackingSteps";
+// import TrackingSteps from "../tracking-steps/TrackingSteps";
 import TrackingTimeline from "../tracking-timeline/TrackingTimeline";
 import ErrorTracking from "../status-tracking/ErrorTracking";
 import LoadingTrack from "../status-tracking/LoadingTrack";
 import { statusCode } from "../../helpers/trackingStatus";
 import CanceledTracking from "../status-tracking/CanceledTracking";
+import { lazy, Suspense } from "react";
+
+const TrackingSteps = lazy(() => import("../tracking-steps/TrackingSteps"));
 
 export default function TrackingWrapper() {
   const trackingData = useSelector((state: RootState) => state?.tracking);
@@ -25,7 +28,9 @@ export default function TrackingWrapper() {
   }
   return (
     <div className="py-16">
-      <TrackingSteps />
+      <Suspense fallback={<LoadingTrack />}>
+        <TrackingSteps />
+      </Suspense>
       <TrackingTimeline />
     </div>
   );
