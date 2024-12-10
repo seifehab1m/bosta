@@ -10,7 +10,7 @@ export const TimeLineItem = ({ timestamp, state, msg }: TimeLineItemProps) => {
     >
       <h3 className="font-semibold text-gray-dark">{state}</h3>
       <div>
-        <p>{formatTime(timestamp)}</p>
+        <p className="text-gray-text text-sm font-semibold">{formatTime(timestamp)}</p>
         {msg && <p className="text-gray-500">{msg}</p>}
       </div>
     </div>
