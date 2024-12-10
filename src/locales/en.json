@@ -1,0 +1,17 @@
+{
+  "pickedUp": "Picked Up",
+  "processing": "Processing",
+  "outForDelivery": "Out for Delivery",
+  "delivered": "Delivered",
+  "trackYourOrder": "Track Your Order",
+  "trackingNo": "Tracking No",
+  "order": "Order",
+  "ArrivingBy": "Arriving by",
+  "OrderIs": "Order is",
+  "unKnownStatus": "Unknown Status",
+  "TrackingDetails": "Tracking Details",
+  "more": "More",
+  "pleaseWait": "Please wait...",
+  "canceled": "Canceled",
+  "errorTracking": "No record of this tracking number can be found at this time, please check the number and try again later. For further assistance, please contact Customer Service."
+}

@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #f3fafb;
+  --gray-dark: #111619;
+  --primary: #0098a5;
+  --text-gray: #667085;
+  --light-gray: #d0d5dd;
+  --light-danger:#FEF3F2
+}
+
+body {
+  font-family: "Cairo";
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+}
+
+body[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+/* ----------------------------- antd steps -------------------- */
+/* Default for LTR (Left to Right) */
+.ant-steps
+  .ant-steps-item-process
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after,
+.ant-steps
+  .ant-steps-item-wait
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after {
+  background: url(https://bosta.co/ad76ad1eec079a9d5e551350271459df.svg);
+  right: 0;
+  /* transform: translateX(-100%); */
+}
+
+/* For RTL (Right to Left) */
+body[dir="ltr"]
+  .ant-steps
+  .ant-steps-item-process
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after,
+.ant-steps
+  .ant-steps-item-wait
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after {
+  background: url(https://bosta.co/ad76ad1eec079a9d5e551350271459df.svg);
+  left: 0;
+  /* transform: translateX(100%); */
+}
+
+.line {
+  background-color: #e4e7ec;
+  width: 100%;
+  height: 1px;
+}
+/* -------------------------- ants steps ----------------------------- */
+.ant-steps
+  .ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after {
+  width: 100%;
+  z-index: 1;
+  background-color: var(--primary);
+}
+
+.ant-steps .ant-steps-item-tail::after {
+  height: 3px;
+}
+
+.ant-steps.ant-steps-label-vertical .ant-steps-item-tail {
+  padding: 0px !important;
+}
+/* Custom styles for the title */
+.ant-steps-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-dark);
+  text-wrap: nowrap;
+}
+
+/* Custom styles for the description */
+.ant-steps-item-description {
+  font-size: 14px;
+  font-weight: 400; /* Make it bold */
+  color: var(--gray-dark);
+  text-wrap: nowrap;
+}
+/* ----------------------------- antd steps vertical -------------------- */
+.ant-steps.ant-steps-vertical
+  > .ant-steps-item
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after {
+  width: 3px;
+}
+.ant-steps.ant-steps-vertical > .ant-steps-item {
+  padding-bottom: 20px;
+}
+.ant-steps.ant-steps-vertical
+  > .ant-steps-item
+  > .ant-steps-item-container
+  > .ant-steps-item-tail {
+  top: 10px;
+  inset-inline-start: 11px;
+  width: 1px;
+  height: 100%;
+  padding: 5px 0 0px;
+}
+
+/* --------------------------- antd navbar ------------------------------ */
+.ant-layout-header,
+.ant-menu-light {
+  background-color: var(--bg-color);
+}
+.navbar .ant-select-single .ant-select-selector {
+  border: 0px solid transparent;
+  background-color: var(--bg-color);
+  box-shadow: none !important; /* Remove the focus shadow */
+}
+
+/* --------------------------- antd input ------------------------------ */
+
+.custom-search {
+  width: 100%;
+  max-width: 500px;
+}
+
+.custom-search .ant-input {
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(29, 41, 57, 0.05), 0 4px 16px rgba(29, 41, 57, 0.1);
+  border-radius: 10px;
+}
+
+.custom-search .ant-btn {
+  height: 60px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+}
+.custom-search .ant-input-search-button .anticon {
+  font-size: 30px; /* Increase icon size */
+}
+
+.custom-search .ant-btn:hover {
+  background-color: darkred !important;
+}
+/* ------------------------------ antd timeline -------------------------- */
+.ant-timeline .ant-timeline-item-last > .ant-timeline-item-tail {
+  display: flex;
+}
+.ant-timeline-item-tail {
+  border-left: 3px solid #f0f0f0 !important;
+}
+.ant-timeline .ant-timeline-item-head-blue {
+  color: var(--light-gray);
+  border-color: var(--light-gray);
+}
+.ant-timeline .ant-timeline-item-head {
+  width: 13px;
+  height: 13px;
+  background-color: var(--light-gray);
+  border: 3px solid transparent;
+}
+
+/* ----------------------------- media query ----------------------------- */
+
+@media (max-width: 574px) {
+  .ant-steps
+    .ant-steps-item-process
+    > .ant-steps-item-container
+    > .ant-steps-item-tail::after,
+  .ant-steps
+    .ant-steps-item-wait
+    > .ant-steps-item-container
+    > .ant-steps-item-tail::after {
+    background: url(https://bosta.co/bd0b88b2672bc09f0173376f3b7f9de3.svg);
+  }
+
+  body[dir="ltr"]
+    .ant-steps
+    .ant-steps-item-process
+    > .ant-steps-item-container
+    > .ant-steps-item-tail::after,
+  body[dir="ltr"]
+    .ant-steps
+    .ant-steps-item-wait
+    > .ant-steps-item-container
+    > .ant-steps-item-tail::after {
+    background: url(https://bosta.co/bd0b88b2672bc09f0173376f3b7f9de3.svg);
+  }
+}
