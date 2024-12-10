@@ -8,21 +8,33 @@
   --primary: #0098a5;
   --text-gray: #667085;
   --light-gray: #d0d5dd;
-  --light-danger:#FEF3F2
+  --light-danger: #fef3f2;
+}
+[data-theme="dark"] {
+  --bg-primary: #121212; /* Primary background color */
+  --gray-dark: #e0e0e0; /* Text on dark background */
+  --primary: #00b0bd; /* Bright, saturated primary color */
+  --text-gray: #a3a3a3; /* Muted text color */
+  --light-gray: #424242; /* Border or light UI elements */
+  --light-danger: #3b1817; /* Danger background in dark mode */
 }
 
 body {
+  background-color: var(--bg-primary);
   font-family: "Cairo";
   direction: rtl;
   text-align: right;
   overflow-x: hidden;
+
 }
 
 body[dir="ltr"] {
   direction: ltr;
   text-align: left;
 }
-
+.navbar {
+  background-color: var(--bg-primary);
+}
 /* ----------------------------- antd steps -------------------- */
 /* Default for LTR (Left to Right) */
 .ant-steps
@@ -79,7 +91,7 @@ body[dir="ltr"]
 .ant-steps-item-title {
   font-size: 14px;
   font-weight: 500;
-  color: var(--gray-dark);
+  color: var(--gray-dark) !important;
   text-wrap: nowrap;
 }
 
@@ -87,7 +99,7 @@ body[dir="ltr"]
 .ant-steps-item-description {
   font-size: 14px;
   font-weight: 400; /* Make it bold */
-  color: var(--gray-dark);
+  color: var(--gray-dark) !important;
   text-wrap: nowrap;
 }
 /* ----------------------------- antd steps vertical -------------------- */
