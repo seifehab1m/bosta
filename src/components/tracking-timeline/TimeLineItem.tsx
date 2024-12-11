@@ -4,7 +4,7 @@ import { TimeLineItemProps } from "./TimelineTypes";
 export const TimeLineItem = ({ timestamp, state, msg }: TimeLineItemProps) => {
   return (
     <div
-      className={`border border-light-gray mt-3 p-3 rounded-[4px] ${
+      className={`border border-light-gray mt-3 p-3 rounded-[4px] animate-slideLeft ${
         state && state?.length > 30 ? "w-full" : "w-fit"
       }`}
     >

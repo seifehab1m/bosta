@@ -218,7 +218,7 @@ body[dir="ltr"]
 }
 
 .animate-slideDown {
-  animation: slideDown 1s ease forwards; /* Use forwards to keep the final position */
+  animation: slideDown 2s ease forwards; /* Use forwards to keep the final position */
 }
 
 @keyframes slideLeft {
@@ -231,5 +231,5 @@ body[dir="ltr"]
 }
 
 .animate-slideLeft {
-  animation: slideLeft 1s ease forwards; /* Use forwards to keep the final position */
+  animation: slideLeft 2s ease forwards; /* Use forwards to keep the final position */
 }

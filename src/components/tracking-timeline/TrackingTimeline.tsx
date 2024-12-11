@@ -33,6 +33,7 @@ export default function TrackingTimeline() {
             timestamp={event?.timestamp}
             state={event?.state}
             msg={event?.msg}
+            
           />
         ))}
       </div>
@@ -55,7 +56,7 @@ export default function TrackingTimeline() {
         className={`timeline-wrapper ${expanded ? "expanded" : ""}`}
         style={{ maxHeight: expanded ? "none" : "400px", overflow: "hidden" }}
       >
-        <Timeline items={items} />
+        <Timeline items={items}  />
 
         {!expanded && (
           <>
